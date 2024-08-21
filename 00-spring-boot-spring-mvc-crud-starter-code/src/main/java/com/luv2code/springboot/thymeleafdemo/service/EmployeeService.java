@@ -1,6 +1,7 @@
 package com.luv2code.springboot.thymeleafdemo.service;
 
 import com.luv2code.springboot.thymeleafdemo.entity.Employee;
+import com.luv2code.springboot.thymeleafdemo.user.WebUser;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
@@ -11,10 +12,11 @@ public interface EmployeeService extends UserDetailsService {
 
     Employee findById(int theId);
 
-    Employee save(Employee theEmployee);
+    void save(WebUser webUser);
 
     void deleteById(int theId);
 
     public Employee findByUserName(String userName);
 
+    Employee save(Employee theEmployee);
 }
